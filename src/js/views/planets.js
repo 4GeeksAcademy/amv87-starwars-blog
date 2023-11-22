@@ -18,7 +18,10 @@ export const Planets = () => {
                             <p className="card-text">Population: {item.population}</p>
                             <p className="card-text">Terrain: {item.terrain}</p>
                             <Link to="/">
-                                <button className="btn btn-primary">Learn more!</button>
+                                <button className="btn btn-outline-primary">Learn more!</button>
+                            </Link>
+                            <Link to="/">
+                                <button className="btn btn-outline-warning float-end">♡</button>
                             </Link>
                         </div>
                     </div>
