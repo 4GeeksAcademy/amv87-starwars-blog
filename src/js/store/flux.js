@@ -12,6 +12,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+			],
+			character: [
+				{
+					name: "JarJar",
+					gender: "Characters",
+					hair_color: "Characters",
+					eye_color: "Characters",
+				},
+				{
+					name: "Luke",
+					gender: "Characters",
+					hair_color: "Characters",
+					eye_color: "Characters",
+				}
+			],
+			planets: [
+				{
+					name: "Alderaan",
+					population: "Characters",
+					terrain: "Characters",
+				},
+				{
+					name: "Corusant",
+					population: "Characters",
+					terrain: "Characters",
+				}
 			]
 		},
 		actions: {
