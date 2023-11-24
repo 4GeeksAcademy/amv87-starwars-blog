@@ -10,14 +10,14 @@ export const Navbar = () => {
 					<span className="navbar-brand mb-0 h1">Star Wars</span>
 				</Link>
 				<div className="ml-auto">
-					<div class="btn-group">
-						<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					<div className="btn-group">
+						<button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 							Favorites
 						</button>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						<ul className="dropdown-menu">
+							<li><a className="dropdown-item" href="#">Action</a></li>
+							<li><a className="dropdown-item" href="#">Another action</a></li>
+							<li><a className="dropdown-item" href="#">Something else here</a></li>
 						</ul>
 					</div>
 				</div>
