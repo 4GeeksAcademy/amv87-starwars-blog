@@ -13,20 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			character: [
-				{
-					name: "JarJar",
-					gender: "Characters",
-					hair_color: "Characters",
-					eye_color: "Characters",
-				},
-				{
-					name: "Luke",
-					gender: "Characters",
-					hair_color: "Characters",
-					eye_color: "Characters",
-				}
-			],
+			character: [],
 			planets: [
 				{
 					name: "Alderaan",
@@ -49,11 +36,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
-				const store = getStore();
-				  fetch("https://www.swapi.tech/api/people/")
+
+				fetch("https://swapi.dev/api/people/")
 					.then(response => response.json())
-					.then(data => setStore({ character: data.result }))
-					
+					.then(data => setStore({ character: data.results }))
+					.catch(error => console.log('error', error));
+				fetch("https://swapi.dev/api/planets/")
+					.then(response => response.json())
+					.then(data => setStore({ character: data.results }))
 					.catch(error => console.log('error', error));
 			},
 			changeColor: (index, color) => {
