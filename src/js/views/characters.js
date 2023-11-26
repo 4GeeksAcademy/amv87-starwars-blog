@@ -20,7 +20,7 @@ export const Characters = () => {
                                 <p className="card-text">Gender: {item.gender}</p>
                                 <p className="card-text">Hair Color: {item.hair_color}</p>
                                 <p className="card-text">Eye Color: {item.eye_color}</p>
-                                <Link to="/">
+                                <Link to="/character-detail">
                                     <button className="btn btn-outline-primary">Learn more!</button>
                                 </Link>
                                 <Link to="/">
