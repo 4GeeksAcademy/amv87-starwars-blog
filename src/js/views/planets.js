@@ -19,7 +19,7 @@ export const Planets = () => {
                                 <h5 className="card-title">{item.name}</h5>
                                 <p className="card-text">Population: {item.population}</p>
                                 <p className="card-text">Terrain: {item.terrain}</p>
-                                <Link to="/">
+                                <Link to="/planet-detail">
                                     <button className="btn btn-outline-primary">Learn more!</button>
                                 </Link>
                                 <Link to="/">
