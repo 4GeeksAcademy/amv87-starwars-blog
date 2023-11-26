@@ -11,9 +11,9 @@ export const Planets = () => {
 		<div className="container">
             <h1 className="text-start text-danger">Planets</h1>
             <div className="row horizontal">
-                {store.planets.map((item, index) => {
+                {store.planets.map((item) => {
                     return (
-                        <div key={index} className="card text-start mx-3 my-3 p-0 carditem" style={{width: '400px'}}>
+                        <div key={item.url} className="card text-start mx-3 my-3 p-0 carditem" style={{width: '400px'}}>
                             <img src={SmallImage} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title">{item.name}</h5>
