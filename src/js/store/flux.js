@@ -14,18 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			character: [],
-			planets: [
-				{
-					name: "Alderaan",
-					population: "Characters",
-					terrain: "Characters",
-				},
-				{
-					name: "Corusant",
-					population: "Characters",
-					terrain: "Characters",
-				}
-			]
+			planets: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -43,7 +32,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log('error', error));
 				fetch("https://swapi.dev/api/planets/")
 					.then(response => response.json())
-					.then(data => setStore({ character: data.results }))
+					.then(data => setStore({ planets: data.results }))
 					.catch(error => console.log('error', error));
 			},
 			changeColor: (index, color) => {
