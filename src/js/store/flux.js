@@ -14,12 +14,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			character: [],
-			planets: []
+			planets: [],
+			favorites: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+			addFavorite: (favoriteName) => {
+				const store = getStore();
+				
+				if (store.favorites.includes(favoriteName)) {
+					setStore({ favorites: store.favorites.filter((yet)=> yet !== favoriteName) });
+				} else {
+					setStore({ favorites: [...store.favorites , favoriteName] });
+				}
+				
 			},
 			loadSomeData: () => {
 				/**
