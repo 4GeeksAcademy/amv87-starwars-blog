@@ -13,8 +13,8 @@ export const Navbar = () => {
 				</Link>
 				<div className="ml-auto">
 					<div className="btn-group">
-						<button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-							Favorites
+						<button type="button" className="btn btn-lg btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+							Favorites <span className="rounded bg-secondary mx-2 px-2">{store.favorites.length}</span>
 						</button>
 						<ul className="dropdown-menu">
 							{store.favorites.map((item, index)=> <li><a key={index} className="dropdown-item" href="#">{item}</a></li>)}
