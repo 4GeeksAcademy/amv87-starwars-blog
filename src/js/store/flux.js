@@ -31,6 +31,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({ favorites: [...store.favorites , favoriteName] });
 				}
 			},
+			deleteFavorite: (favoriteName) => {
+				const store = getStore();
+				setStore({ favorites: store.favorites.filter((yet)=> yet !== favoriteName) });
+			},
 			loadSomeData: () => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
