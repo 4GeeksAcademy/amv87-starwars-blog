@@ -22,9 +22,7 @@ export const Planets = () => {
                                 <Link to="/planet-detail">
                                     <button className="btn btn-outline-primary">Learn more!</button>
                                 </Link>
-                                <Link to="/">
-                                    <button onClick={()=>actions.addFavorite(item.name)} className="btn btn-outline-warning float-end">♡</button>
-                                </Link>
+                                <button onClick={()=>actions.addFavorite(item.name)} className="btn btn-outline-warning float-end">♡</button>
                             </div>
                         </div>
                     );
