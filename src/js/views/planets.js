@@ -23,7 +23,7 @@ export const Planets = () => {
                                     <button className="btn btn-outline-primary">Learn more!</button>
                                 </Link>
                                 <Link to="/">
-                                    <button className="btn btn-outline-warning float-end">♡</button>
+                                    <button onClick={()=>actions.addFavorite(item.name)} className="btn btn-outline-warning float-end">♡</button>
                                 </Link>
                             </div>
                         </div>
