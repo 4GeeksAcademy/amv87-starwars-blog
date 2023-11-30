@@ -11,7 +11,7 @@ export const Characters = () => {
 		<div className="container">
             <h1 className="text-start text-danger">Characters</h1>
             <div className="row horizontal">
-                {store.character.map((item) => {
+                {store.character.map((item, index) => {
                     return (
                         <div key={item.url} className="card text-start mx-3 my-3 p-0 carditem" style={{width: '400px'}}>
                             <img src={SmallImage} className="card-img-top" alt="..." />
@@ -20,7 +20,7 @@ export const Characters = () => {
                                 <p className="card-text">Gender: {item.gender}</p>
                                 <p className="card-text">Hair Color: {item.hair_color}</p>
                                 <p className="card-text">Eye Color: {item.eye_color}</p>
-                                <Link to="/character-detail">
+                                <Link to={"/character-detail/" + index}>
                                     <button className="btn btn-outline-primary">Learn more!</button>
                                 </Link>
                                 <button onClick={()=>actions.addFavorite(item.name)} className="btn btn-outline-warning float-end">♡</button>
