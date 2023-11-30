@@ -17,9 +17,9 @@ export const Navbar = () => {
 							Favorites <span className="rounded bg-secondary mx-2 px-2">{store.favorites.length}</span>
 						</button>
 						<ul className="dropdown-menu dropdown-menu-end">
-							{store.favorites.map((item, index)=>
+							{store.favorites.map((item)=>
 								<li className="px-2 d-flex justify-content-between align-items-center">
-									<a key={index} className="dropdown-item d-flex justify-content-between" href="#">{item}</a>
+									<a className="dropdown-item d-flex justify-content-between" href="#">{item}</a>
 									<a onClick={()=>actions.deleteFavorite(item)} className="btn btn-danger btn-sm" >X</a>
 								</li>
 							)}
