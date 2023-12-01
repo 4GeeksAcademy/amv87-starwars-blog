@@ -21,7 +21,7 @@ export const Planets = () => {
                                 <Link to={"/planet-detail/" + index}>
                                     <button className="btn btn-outline-primary">Learn more!</button>
                                 </Link>
-                                <button onClick={()=>actions.addFavorite(item.name)} className="btn btn-outline-warning float-end">♡</button>
+                                <button onClick={()=>actions.addFavorite(item.name)} className="btn btn-outline-warning float-end" style={{backgroundColor: store.favorites.includes(item.name) ? "#ffc107" : "", color: store.favorites.includes(item.name) ? "black" : "" }} >♡</button>
                             </div>
                         </div>
                     );
