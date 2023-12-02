@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import SmallImage from "../../img/400x200.png";
+import "../../styles/home.css";
 
 export const Planets = () => {
 	const { store, actions } = useContext(Context);
